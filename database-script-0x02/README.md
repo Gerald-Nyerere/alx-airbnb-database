@@ -13,10 +13,4 @@ This script inserts **sample data** into the Airbnb database to test the schema.
 - **Review**: User feedback on properties.
 - **Message**: Communication between users.
 
----
 
-## **How to Use**
-1. Ensure you have created the database and schema from `schema.sql`.
-2. Run the seed file:
-   ```bash
-   mysql -u your_username -p < seed.sql
