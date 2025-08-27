@@ -20,9 +20,4 @@ This project defines the **Airbnb database schema** using SQL. It follows **Thir
 - **Foreign key constraints** enforce referential integrity.
 - **Indexes** are added for performance on frequently searched columns.
 
----
 
-## **How to Use**
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/alx-airbnb-database.git
