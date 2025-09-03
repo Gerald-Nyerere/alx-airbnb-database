@@ -8,3 +8,5 @@ FROM Booking b
 JOIN User u ON b.user_id = u.id
 JOIN Property p ON b.property_id = p.id
 JOIN Payment pay ON b.id = pay.booking_id;
+WHERE b.check_in_date >= CURRENT_DATE - INTERVAL '90 days'
+  AND p.location = 'Nairobi';
