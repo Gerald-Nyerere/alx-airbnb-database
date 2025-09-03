@@ -10,9 +10,10 @@ FROM
 INNER JOIN
     users AS u
 ON
-    b.user_id = u.id;
+    b.user_id = u.id
 ORDER BY
     b.start_date;
+
 
 SELECT
     p.id AS property_id,
@@ -25,9 +26,10 @@ FROM
 LEFT JOIN
     reviews AS r
 ON
-    p.id = r.property_id;
+    p.id = r.property_id
 ORDER BY
     p.id, r.id;
+
 
 (SELECT
     u.id AS user_id,
