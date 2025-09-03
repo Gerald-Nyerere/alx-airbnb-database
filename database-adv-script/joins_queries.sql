@@ -29,7 +29,6 @@ ON
 ORDER BY
     p.id, r.id;
 
-
 (SELECT
     u.id AS user_id,
     u.name AS user_name,
@@ -54,7 +53,6 @@ FROM
 RIGHT JOIN
     bookings AS b
 ON
-    u.id = b.user_id);
+    u.id = b.user_id)
 ORDER BY
     user_id, booking_id;
-
