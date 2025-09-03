@@ -1,3 +1,7 @@
+## Performance Analysis: Users and Bookings Join
+
+**Query:**
+```sql
 EXPLAIN ANALYZE
 SELECT
     u.name,
@@ -7,6 +11,6 @@ FROM
 JOIN
     bookings b ON u.id = b.user_id
 WHERE
-    b.start_date > '2025-01-01'
+    b.start_date > '2025-09-03'
 ORDER BY
     b.start_date;
