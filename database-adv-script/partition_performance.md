@@ -1,0 +1,4 @@
+EXPLAIN ANALYZE
+SELECT *
+FROM Booking_partitioned
+WHERE start_date BETWEEN '2023-06-01' AND '2023-06-30';
