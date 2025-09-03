@@ -30,31 +30,37 @@ ON
 ORDER BY
     p.id, r.id;
 
-
-(SELECT
-    u.id AS user_id,
-    u.name AS user_name,
-    b.id AS booking_id,
-    b.start_date,
-    b.end_date
-FROM
-    users AS u
-LEFT JOIN
-    bookings AS b
-ON
-    u.id = b.user_id)
+-- Simulated FULL OUTER JOIN using UNION of LEFT and RIGHT JOIN
+(
+    SELECT
+        u.id AS user_id,
+        u.name AS user_name,
+        u.email AS user_email,
+        b.id AS booking_id,
+        b.start_date,
+        b.end_date
+    FROM
+        users AS u
+    LEFT JOIN
+        bookings AS b
+    ON
+        u.id = b.user_id
+)
 UNION
-(SELECT
-    u.id AS user_id,
-    u.name AS user_name,
-    b.id AS booking_id,
-    b.start_date,
-    b.end_date
-FROM
-    users AS u
-RIGHT JOIN
-    bookings AS b
-ON
-    u.id = b.user_id)
+(
+    SELECT
+        u.id AS user_id,
+        u.name AS user_name,
+        u.email AS user_email,
+        b.id AS booking_id,
+        b.start_date,
+        b.end_date
+    FROM
+        users AS u
+    RIGHT JOIN
+        bookings AS b
+    ON
+        u.id = b.user_id
+)
 ORDER BY
     user_id, booking_id;
