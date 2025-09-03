@@ -1,4 +1,5 @@
 -- Retrieve all bookings with user, property, and payment details
+EXPLAIN ANALYZE
 SELECT 
     b.id AS booking_id, b.check_in_date, b.check_out_date, b.total_price,
     u.id AS user_id, u.name AS user_name, u.email,
