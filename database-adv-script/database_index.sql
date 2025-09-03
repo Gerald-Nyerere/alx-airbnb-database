@@ -1,4 +1,13 @@
-CREATE INDEX idx_bookings_user_id ON bookings(user_id);
-CREATE INDEX idx_bookings_start_date ON bookings(start_date);
-CREATE INDEX idx_users_id ON users(id);
-CREATE INDEX idx_properties_id ON properties(id);
+-- Indexes for User table
+CREATE INDEX idx_user_email ON User(email);
+CREATE INDEX idx_user_created_at ON User(created_at);
+
+-- Indexes for Booking table
+CREATE INDEX idx_booking_user_id ON Booking(user_id);
+CREATE INDEX idx_booking_property_id ON Booking(property_id);
+CREATE INDEX idx_booking_created_at ON Booking(created_at);
+
+-- Indexes for Property table
+CREATE INDEX idx_property_location ON Property(location);
+CREATE INDEX idx_property_price ON Property(price);
+CREATE INDEX idx_property_host_id ON Property(host_id);
