@@ -1,6 +1,7 @@
-## Performance Analysis: Users and Bookings Join
+## Query Performance Analysis
 
-**Query:**
+### Query: Join users and bookings filtered by start_date
+
 ```sql
 EXPLAIN ANALYZE
 SELECT
